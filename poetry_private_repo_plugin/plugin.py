@@ -43,7 +43,7 @@ class CustomRepositoryPool(RepositoryPool):
         packages: List[Package] = []
         print(self.repositories)
         for repo in self.repositories:
-            print("checking repo: ", repo)
+            print("checking repo: ", repo, dependency)
             if packages := repo.find_packages(dependency):
                 return packages
 
