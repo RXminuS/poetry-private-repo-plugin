@@ -30,6 +30,7 @@ class CustomRepositoryPool(RepositoryPool):
         """
         # If the enforce-source option is enabled and the dependency doesn't override
         # the source repository, look for a match and, if found, return packages from there.
+        raise "OOOPS"
         if self._enforce_source and not dependency.source_name:
             for match, source in self._enforce_source.items():
                 if dependency.name and fnmatch.fnmatch(dependency.name, match):
