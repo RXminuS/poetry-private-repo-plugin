@@ -45,8 +45,9 @@ class CustomRepositoryPool(RepositoryPool):
         for repo in self.repositories:
             print("checking repo: ", repo, dependency)
             if packages := repo.find_packages(dependency):
+                print("FOUND")
                 return packages
-
+            print("CHECKING AGAIN")
         # No package has been found in any repository
         return []
 
